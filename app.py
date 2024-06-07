@@ -40,7 +40,8 @@ def remback():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         rembg_img_name = filename.split('.')[0]+"_rembg.png"
         remove_background(UPLOAD_FOLDER+'/'+filename,UPLOAD_FOLDER+'/'+rembg_img_name)
-        return render_template('home.html',org_img_name=filename,rembg_img_name=rembg_img_name)
+        return render_template('home.html',org_img_name=filename,rembg_img_name=rembg_img_name, filename=rembg_img_name)
+    return render_template('home.html')  # default response
 
 
 if __name__ == '__main__':
