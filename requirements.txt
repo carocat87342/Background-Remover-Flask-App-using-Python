@@ -1,4 +1,3 @@
 rembg
-PIL
 werkzeug.utils
 flask
